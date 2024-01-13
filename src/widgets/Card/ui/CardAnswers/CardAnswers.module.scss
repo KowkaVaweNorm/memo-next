@@ -1,0 +1,48 @@
+@import "app/styles/placeholders/scrollbar.scss";
+
+$shadow-gradient: linear-gradient(180deg, rgb(0 0 0 / 0%) 84%, rgb(0 0 0 / 20%));
+
+.card_answers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  padding-right: 15px;
+
+  @extend %scrollbar;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $shadow-gradient;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+
+  &.isScrolling {
+    &::after {
+      content: '';
+      position: absolute;
+      border-radius: inherit;
+      bottom: 0;
+      left: 0;
+      background: $shadow-gradient;
+      z-index: 2;
+      opacity: 100;
+    }
+  }
+
+
+}
+
+.answer_item {
+  // width: 100%;
+  margin-bottom: 7px;
+}

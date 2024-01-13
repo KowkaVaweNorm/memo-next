@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:storybook/recommended"
+  ],
+  "rules": {
+    "react/display-name": "off",
+    "react-hooks/exhaustive-deps": "error"
+  }
+}

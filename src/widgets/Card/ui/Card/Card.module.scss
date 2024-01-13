@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: min(20px, 10%);
+  padding: 10px;
+  padding-top: 20px;
+  width: min(420px, 100%);
+  height: 90vh;
+  // min-height: 550px;
+  max-height: 1000px;
+  margin-top: 0;
+
+  @media (width < $laptop-l-plus) {
+    height: 200px
+  }
+
+  // border: 1px solid black;
+  font-size: 1.3rem;
+  background-color: var(--primary-bg-color);
+  border-radius: 20px;
+  box-shadow: rgb(0 0 0 / 25%) 0 54px 55px,
+  rgb(0 0 0 / 12%) 0 -12px 30px,
+  rgb(0 0 0 / 12%) 0 4px 6px,
+  rgb(0 0 0 / 17%) 0 12px 13px,
+  rgb(0 0 0 / 9%) 0 -3px 5px;
+  transition: height box-shadow 0.5s;
+}
+
+@supports (height: 90dvh) {
+  .card {
+    height: 90dvh;
+  }
+}
+
+.answers {
+  width: 95%;
+  color: var(--primary-text-color);
+}
+
+.question {
+  width: 95%;
+  color: var(--primary-text-color);
+}

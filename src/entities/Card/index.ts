@@ -1,0 +1,1 @@
+export type { CardSchema,AnswerItem, QuestionItem } from './model/types/card';

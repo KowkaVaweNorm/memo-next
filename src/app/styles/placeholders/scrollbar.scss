@@ -1,0 +1,16 @@
+%scrollbar {
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: var(--primary-bg-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary-text-color);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    border: .5px solid rgba(0, 0, 0, 0.103);
+  }
+}

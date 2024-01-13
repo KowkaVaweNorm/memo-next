@@ -1,0 +1,15 @@
+.root_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 5px;
+  overflow-y: hidden;
+  transition: min-height 0.5s;
+}
+
+@supports (min-height: 100dvh) {
+  .root_page {
+    min-height: 100dvh;
+  }
+}
