@@ -8,6 +8,7 @@ $shadow-gradient: linear-gradient(180deg, rgb(0 0 0 / 0%) 84%, rgb(0 0 0 / 20%))
   align-items: start;
   flex-wrap: wrap;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 15px;
 
   @extend %scrollbar;
