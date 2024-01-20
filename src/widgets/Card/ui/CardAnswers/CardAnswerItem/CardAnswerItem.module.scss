@@ -14,19 +14,69 @@
   margin-right: 5px;
 }
 
-.answer {
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
+// .answer {
+//   // text-overflow: ellipsis;
+//   // overflow: hidden;
+// }
 
 .text {
+  position: relative;
   font-size: 0.7rem;
   font-weight: 600;
   text-align: left;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
+
+.expand_btn {
+  --innerColor: black;
+  position: absolute;
+  right: 5px;
+  width: 50px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: var(--innerColor);
+    transition: 0.2s;
+  }
+
+  &:not(.opened)::before {
+    left: 8px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: var(--innerColor);
+    transition: 0.2s;
+  }
+
+  &:not(.opened)::after {
+    right: 8px;
+  }
+
+
+}
+
+.opened {
+  &::before {
+    right: 8px;
+  }
+
+  &::after {
+    left: 8px;
+  }
+}
+
 
 .reset_btn {
   margin: 0;
@@ -55,40 +105,50 @@
   color: var(--color);
 }
 
-.btn::after,
-.btn::before {
-  content: '';
-  display: block;
-  height: 100%;
-  width: 100%;
-  transform: skew(90deg) translate(-50%, -50%);
-  position: absolute;
-  inset: 50%;
-  left: 25%;
-  z-index: -1;
-  transition: .5s ease-out;
-  background-color: var(--color);
-}
+// .btn::after,
+// .btn::before {
+//   content: '';
+//   display: block;
+//   height: 100%;
+//   width: 100%;
+//   transform: skew(90deg) translate(-50%, -50%);
+//   position: absolute;
+//   inset: 50%;
+//   left: 25%;
+//   z-index: -1;
+//   transition: .5s ease-out;
+//   background-color: var(--color);
+// }
 
-.btn::before {
-  top: -50%;
-  left: -25%;
-  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-}
+// .btn::before {
+//   top: -50%;
+//   left: -25%;
+//   transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+// }
 
-.btn:hover::before {
-  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-}
+// .btn:hover::before {
+//   transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+// }
 
-.btn:hover::after {
-  transform: skew(45deg) translate(-50%, -50%);
-}
+// .btn:hover::after {
+//   transform: skew(45deg) translate(-50%, -50%);
+// }
 
 .btn:hover {
   color: var(--color2);
+
+  &>.expand_btn {
+    &::before {
+      background-color: var(--color2);
+    }
+
+    &::after {
+      background-color: var(--color2);
+    }
+  }
 }
 
-.btn:active {
-  filter: brightness(.7);
-  transform: scale(.98);
-}
+// .btn:active {
+//   filter: brightness(.7);
+//   transform: scale(.98);
+// }
