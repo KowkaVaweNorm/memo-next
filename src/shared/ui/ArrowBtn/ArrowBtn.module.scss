@@ -1,0 +1,27 @@
+$ARROW_BTN_WIDTH: 60px;
+$ARROW_BTN_HEIGHT: 60px;
+$ARROW_COLOR: black;
+$ARROW_STROKE_WIDTH: 3px;
+$ARROW_STROKE_HEIGHT: calc($ARROW_BTN_HEIGHT * 0.6);
+
+.arrow_btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $ARROW_BTN_WIDTH;
+  min-width: $ARROW_BTN_WIDTH;
+  height: $ARROW_BTN_HEIGHT;
+  min-height: $ARROW_BTN_HEIGHT;
+  border: 2px solid $ARROW_COLOR;
+  border-radius: 50%;
+  background-color: var(--primary-bg-color);
+  z-index: 1;
+
+  &.shadow {
+    -webkit-box-shadow: -12px 14px 13px 3px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: -12px 14px 13px 3px rgba(34, 60, 80, 0.6);
+    box-shadow: -12px 14px 13px 3px rgba(34, 60, 80, 0.6);
+
+  }
+}

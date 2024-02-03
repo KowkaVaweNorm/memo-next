@@ -31,7 +31,7 @@ export const CardQuestions = memo((props: ICardQuestionsProps): JSX.Element => {
     } else {
       document.querySelector('.' + cls.card_questions)?.classList.remove(cls.isScrolling);
     }
-  }, [])
+  }, [question])
 
   // Если изменилась ширина надо изменить отображение тени
   useEffect(() => {

@@ -5,7 +5,8 @@ $shadow-gradient: linear-gradient(180deg, rgb(0 0 0 / 0%) 84%, rgb(0 0 0 / 20%))
 .card_answers {
   display: flex;
   justify-content: flex-start;
-  align-items: start;
+  align-items: flex-start;
+  gap: 7px;
   flex-wrap: wrap;
   overflow-y: auto;
   overflow-x: hidden;

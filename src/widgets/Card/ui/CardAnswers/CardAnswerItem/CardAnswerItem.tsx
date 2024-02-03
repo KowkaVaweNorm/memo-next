@@ -30,7 +30,7 @@ export const CardAnswerItem = memo((props: ICardAnswerItemProps): JSX.Element =>
 
       setIsOverflowed(isTextOverflowed);
     }
-  }, []);
+  }, [answer.text]);
 
 
   const handleClick = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {

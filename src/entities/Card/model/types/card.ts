@@ -1,4 +1,5 @@
 export interface CardSchema{
+  id?: string
   question: QuestionItem
   answers: AnswerItem[]
 }
