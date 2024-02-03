@@ -1,6 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs';
 import path from 'path';
-import type {Configuration} from 'storybook' 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [

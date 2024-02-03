@@ -1,10 +1,23 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "mobx"
+  ],
   "extends": [
     "next/core-web-vitals",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "rules": {
+    //react
     "react/display-name": "off",
-    "react-hooks/exhaustive-deps": "error"
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    // mobx
+    "mobx/exhaustive-make-observable": "warn",
+    "mobx/unconditional-make-observable": "error",
+    "mobx/missing-make-observable": "error",
+    "mobx/missing-observer": "warn"
+    // "mobx/no-anonymous-observer": "warn"
   }
 }
