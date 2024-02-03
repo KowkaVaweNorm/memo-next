@@ -1,0 +1,48 @@
+.card_manager {
+  position: relative;
+}
+
+.card_manager,
+.card_manager:first-child {
+  width: min(420px, 100%);
+  height: 90vh;
+}
+
+.next_page_btn {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  right: 10px;
+
+  &.active {
+    animation-name: jump_arrow_btn;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+}
+
+
+
+
+@keyframes jump_arrow_btn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-25px);
+  }
+
+  90% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
